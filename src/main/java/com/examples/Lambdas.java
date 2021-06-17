@@ -1,5 +1,9 @@
 package com.examples;
 
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+
 import com.bean.Apple;
 
 public class Lambdas {
@@ -8,7 +12,7 @@ public class Lambdas {
 		/*
 		 * LOOK AT THE WAY OF INSTANTIATION HERE
 		 * */
-		Predicate<Apple> predicate = (Apple apple) -> "red".equals(apple.getColor());
+		CustomPredicate<Apple> customPredicate = (Apple apple) -> "red".equals(apple.getColor());
 		
 		/*
 		 * Predicate that return an integer
@@ -21,15 +25,29 @@ public class Lambdas {
 		ReturnBooleanPredicate<String> p2 = (String a) -> a.length() > 150;
 		
 		/*
-		 * Predicate that returns void
+		 * Predicate that returns void (Consumer)
 		 * */
-		ReturnVoidPredicate<String> p3 = (String s) -> {
+		CustomConsumer<String> p3 = (String s) -> {
 			System.out.println("Result:");
 			System.out.println(s);
 		};
+		
+		CustomFunction<String, Double> customFunction = 
+				(String s) -> Double.valueOf(s);
+		
+		/*
+		 * IMPORTANT NOTE.
+		 * 
+		 * Predicate ... takes an object T and returns a boolean
+		 * Consumer ... takes an object T and returns void
+		 * Function ... takes an object T and return a value R
+		 * */
+		Predicate<String> predicate = (String s) -> s.length() > 0;
+		Consumer<Integer> consumer = (Integer i) -> System.out.println(i);
+		Function<String, Integer> function = (String s) -> Integer.valueOf(s);
 	}
 	
-	public interface Predicate<T>{
+	public interface CustomPredicate<T>{
 		boolean test(T t);
 	}
 	
@@ -41,7 +59,11 @@ public class Lambdas {
 		int test(T t);
 	}
 	
-	public interface ReturnVoidPredicate<T>{
+	public interface CustomConsumer<T>{
 		void test(T t);
+	}
+	
+	public interface CustomFunction<T, R> {
+		R apply(T t);
 	}
 }

@@ -7,6 +7,18 @@ public class Apple {
 	String type;
 	String color;
 	
+	public Apple() {
+		
+	}
+	
+	public Apple(String type) {
+		
+	}
+	
+	public Apple (String type, String color) {
+		
+	}
+	
 	public Apple(int age, Float weight, String type, String color) {
 		super();
 		this.age = age;

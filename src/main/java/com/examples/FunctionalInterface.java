@@ -2,6 +2,14 @@ package com.examples;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
+import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 import com.bean.Apple;
@@ -26,7 +34,37 @@ public class FunctionalInterface {
 				return "green".equalsIgnoreCase(apple.getColor());
 			}
 		});
-		System.out.println("After Anonymous Class: " + inventory2.stream().map(it -> it.getType()).collect(Collectors.joining(", ")));		
+		System.out.println("After Anonymous Class: " + inventory2.stream().map(it -> it.getType()).collect(Collectors.joining(", ")));
+		
+		
+		/*
+		 * IMPORTANT: Common functional interfaces
+		 * Note how some parameters do not need the name of the variable... only the type...
+		 * 
+		 * IMPORTANT: Note how each of the following has their versions to support primitive types.
+		 * */
+		Predicate<String> predicate = 
+				(String) -> true;
+		Consumer<String> consumer = 
+				(String) -> {};
+		Function<String, Integer> function = 
+				(String s) -> s.length();
+		Supplier<String> supplier = 
+				() -> "new string value supplied";
+		UnaryOperator<String> unaryOperator = 
+				(String ss) -> "string value";
+		/*
+		 * IMPORTANT:
+		 * Note how the Unary and Binary receive and return the same type.
+		 * */
+		BinaryOperator<String> binaryOperator = 
+				(String s1, String s2) -> "string value";
+		BiPredicate<String, Integer> biPredicate = 
+				(String, Integer) -> true;
+		BiConsumer<String, Float> biConsumer = 
+				(String, Float) -> {};
+		BiFunction<String, Float, Double> biFunction = 
+				(String, Float) -> 1d;
 	}
 	
 	

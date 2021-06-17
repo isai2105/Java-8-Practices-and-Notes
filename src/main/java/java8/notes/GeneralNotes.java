@@ -42,4 +42,10 @@ public class GeneralNotes {
 	 * in Java 8 when you write File::isHidden you create a method reference.
 	 * */
 	
+	/*
+	 * IMPORTANTE NOTE 5
+	 * 
+	 * Every type in Java is either a REFERENCE type or a Primitive Type
+	 * Generics can be bound only to Reference types.
+	 * */
 }
