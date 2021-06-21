@@ -36,6 +36,7 @@ public class ComposingChaining {
 				redApple.or(a -> a.getWeight() > 150)
 				.and(a -> "green".equals(a.getColor()));
 		
+		
 		// Chaining Functions (andThen && Compose)
 		Function<Integer, Integer> f0 = x -> x + 1;
 		Function<Integer, Integer> g0 = x -> x * 2;
