@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import com.bean.Dish;
 
@@ -23,6 +24,24 @@ public class PartitioningDataWithStreams {
 		overloadedPartitioning();
 		// Multilevel Partitioning
 		multiLevelPartitioning();
+		// Partitioning prime & nonprime numbers
+		System.out.println(partitionPrimes(13));
+	}
+	
+	private static Map<Boolean, List<Integer>> partitionPrimes(int n) {
+		return 
+			IntStream.rangeClosed(2, n).boxed()
+			.collect(
+				Collectors.partitioningBy(candidate -> isPrime(candidate))
+			);
+	}
+	
+	private static boolean isPrime(int candidate) {
+		// The optimization is 
+		int candidateRoot = (int) Math.sqrt((double) candidate);
+		return 
+			IntStream.range(2, candidateRoot)
+				.noneMatch(i -> candidate % i == 0);
 	}
 	
 	private static void multiLevelPartitioning() {

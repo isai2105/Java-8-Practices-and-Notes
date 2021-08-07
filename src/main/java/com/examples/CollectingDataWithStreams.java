@@ -1,6 +1,8 @@
 package com.examples;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Currency;
 import java.util.IntSummaryStatistics;
@@ -25,6 +27,21 @@ public class CollectingDataWithStreams {
 		summingAndAverageAnsStatictics();
 		// General Reducing
 		generalReducing();
+		// Collectors.toCollection()
+		collectorToCollectionExample();
+	}
+	
+	/*
+	 * IMPORTANT: To stop the ugly habit of casting streams
+	 * */
+	private static void collectorToCollectionExample() {
+		List<Dish> menu = createListOfDishes();
+		List<Dish> dishes = 
+			menu
+				.stream()
+				.collect(
+					Collectors.toCollection(ArrayList::new)
+				);
 	}
 	
 	// All collectors can be implemented using the Collectors.reducing()
