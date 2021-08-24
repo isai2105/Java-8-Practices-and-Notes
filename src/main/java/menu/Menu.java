@@ -7,7 +7,6 @@ import com.examples.BehaviorParameterization;
 import com.examples.CollectingDataWithStreams;
 import com.examples.ComposingChaining;
 import com.examples.CustomCollectorExample;
-import com.examples.ForkJoinFrameWorkExamples;
 import com.examples.GroupingDataWithStreams;
 import com.examples.Lambdas;
 import com.examples.MethodReference;
@@ -17,7 +16,10 @@ import com.examples.PartitioningDataWithStreams;
 import com.examples.PredicateExamples;
 import com.examples.StreamAPIExamples;
 import com.examples.TryWithResourcesStatement;
+import com.examples.NullOptional.NullOptionalExamples;
+import com.examples.dateAndTime.NewDateAndTimeExamples;
 import com.examples.forkJoin.ForkJoinExamples;
+import com.examples.future.CompletableFutureExamples;
 
 import java8.notes.BehaviorParameterizationNotes;
 import java8.notes.CollectorInterfaceNotes;
@@ -32,6 +34,11 @@ import java8.notes.MethodReferenceNotes;
 import java8.notes.ParallelStreamsNotes;
 import java8.notes.StreamAPINotes;
 import java8.notes.ToStudyLater;
+import java8.notes.dateAndTime.NewDateAndTimeNotes;
+import java8.notes.functional.FunctionalProgrammingTechniquesNotes;
+import java8.notes.functional.FunctionalStyleProgrammingNotes;
+import java8.notes.future.CompletableFutureNotes;
+import java8.notes.optional.NullOptionalNotes;
 import java8.notes.refactoring.RefactoringNotes;
 
 public class Menu {
@@ -117,4 +124,29 @@ public class Menu {
 	 *  14. Refactoring old code to Effective Java 8
 	 *  */
 	RefactoringNotes refactoringNotes;
+	
+	/**
+	 *  15. Optional
+	 *  */
+	NullOptionalNotes nullOptionalNotes;
+	NullOptionalExamples nullOptionalExamples;
+	
+	/**
+	 *  15. Completable Future
+	 *  */
+	CompletableFutureNotes completableFutureNotes;
+	CompletableFutureExamples completableFutureExamples;
+	
+	/**
+	 *  16. New Date & Time API
+	 *  */
+	NewDateAndTimeNotes newDateAndTimeNotes;
+	NewDateAndTimeExamples newDateAndTimeExamples;
+	
+	/**
+	 * 17. Functional Style Programming
+	 * */
+	FunctionalStyleProgrammingNotes functionalStyleProgrammingNotes;
+	FunctionalProgrammingTechniquesNotes functionalProgrammingTechniquesNotes;
+	
 }

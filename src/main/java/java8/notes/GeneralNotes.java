@@ -43,9 +43,15 @@ public class GeneralNotes {
 	 * */
 	
 	/*
-	 * IMPORTANTE NOTE 5
+	 * IMPORTANT NOTE 5
 	 * 
 	 * Every type in Java is either a REFERENCE type or a Primitive Type
 	 * Generics can be bound only to Reference types.
+	 * */
+	
+	/*
+	 * IMPORTANT NOTE 6
+	 * 
+	 * Interfaces can now have impl code through: default methods and static methods.
 	 * */
 }

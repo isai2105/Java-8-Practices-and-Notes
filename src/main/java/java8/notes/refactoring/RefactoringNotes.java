@@ -39,6 +39,7 @@ public class RefactoringNotes {
 	 *
 	 * Differences between anonymous classes and Lambda expressions:	
 	 * 
+	 * - Lambda expressions can make the stack trace less readable (more difficult to debug).
 	 * - "this" & "super" mean different things on both:
 	 * 		Inside anonymous class, this refers to the class itself .. 
 	 * 		whereas in a lambda expression it refers to the enclosing class.

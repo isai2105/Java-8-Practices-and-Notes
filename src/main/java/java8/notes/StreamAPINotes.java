@@ -3,7 +3,7 @@ package java8.notes;
 public class StreamAPINotes {
 
 	/*
-	 * IMPORTANTE NOTE 1
+	 * IMPORTANT NOTE 1
 	 * 
 	 * STreams avoids the need for us to write code that uses 'synchronized'.
 	 * Java 8 can transparently run your pipeline of 
@@ -14,7 +14,7 @@ public class StreamAPINotes {
 	 * */
 	
 	/*
-	 * IMPORTANTE NOTE 2
+	 * IMPORTANT NOTE 2
 	 * 
 	 * For introductory purposes, a stream 
 	 * is a sequence of data items that are conceptually produced one at a time.
@@ -22,7 +22,7 @@ public class StreamAPINotes {
 	 * */
 	
 	/*
-	 * IMPORTANTE NOTE 3
+	 * IMPORTANT NOTE 3
 	 * 
 	 * Streams use internal iteration (you do not need to write code for iterating).
 	 * Collections use external iteration.
@@ -30,14 +30,14 @@ public class StreamAPINotes {
 	 * */
 	
 	/*
-	 * IMPORTANTE NOTE 4
+	 * IMPORTANT NOTE 4
 	 * 
 	 * Note that generating a stream from an ordered collection preserves the ordering.
 	 * 
 	 * */
 	
 	/*
-	 * IMPORTANTE NOTE 5
+	 * IMPORTANT NOTE 5
 	 * 
 	 * Streams can be consumed only once!
 	 * For example, the following code fails when executed:
@@ -49,7 +49,7 @@ public class StreamAPINotes {
 	*/
 	
 	/*
-	 * IMPORTANTE NOTE 6
+	 * IMPORTANT NOTE 6
 	 * 
 	 * Intermediate Operations:
 	 * 
@@ -57,7 +57,7 @@ public class StreamAPINotes {
 	 */
 	
 	/*
-	 * IMPORTANTE NOTE 7
+	 * IMPORTANT NOTE 7
 	 * 
 	 * Terminal Operations:
 	 * 
@@ -65,21 +65,21 @@ public class StreamAPINotes {
 	 */
 	
 	/*
-	 * IMPORTANTE NOTE 8
+	 * IMPORTANT NOTE 8
 	 * The 'distinct' operation works according to the implementation
 	 * of 'hashCode' and 'equals'.
 	 * 
 	 */
 	
 	/*
-	 * IMPORTANTE NOTE 9
+	 * IMPORTANT NOTE 9
 	 * Find Any vs Find First.
 	 * Find First is more constraining in parallel processing of a Stream;
 	 * The findAny method works better for parallel processing .
 	 */
 	
 	/*
-	 * IMPORTANTE NOTE 10
+	 * IMPORTANT NOTE 10
 	 * Stateful vs Stateless
 	 * 
 	 * Operations such as: sorted, distinct, Reduce, Sum, Max .. are Stateful.. because the operation needs to be aware
@@ -90,7 +90,7 @@ public class StreamAPINotes {
 	 */
 	
 	/*
-	 * IMPORTANTE NOTE 11
+	 * IMPORTANT NOTE 11
 	 * 
 	 * Primitive stream specializations
 	 * IntStream, DoubleStream & LongStream.
@@ -109,9 +109,16 @@ public class StreamAPINotes {
 	 */
 	
 	/*
-	 * IMPORTANTE NOTE 12
+	 * IMPORTANT NOTE 12
 	 * Streams vs Collections
 	 * 
 	 * STreams can be unbounded; there can be infinite streams.
 	 */
+	
+	/*
+	 * IMPORTANT NOTE 13
+	 * 
+	 * In particular, one limitation is that you can’t define a stream 
+	 * recursively because a stream can be consumed only once.
+	 * */
 }
